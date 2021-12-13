@@ -66,7 +66,7 @@ from DewmiBot.modules.system_stats import bot_sys_stats
 import DewmiBot.modules.sql.users_sql as sql
 
 PM_START_TEXT = f"""
-👋🏼 Hello There , I'm A-X-L 
+👋🏼 Hello There , I'm Alita
 An anime - Advanced telegram Group management 
 Bot For help You Manage & Protect Your Groups🙃.
 ➼ `{sql.num_users()}` *Users*
@@ -75,7 +75,7 @@ Bot For help You Manage & Protect Your Groups🙃.
 """
 
 HELP_STRINGS = f"""
-✨Hello There , I'm A-X-L
+✨Hello There , I'm Alita
 An anime - Themed advanced telegram Group management
 Bot For help You Manage & Protect Your Groups.
 **General commands**:
@@ -108,17 +108,17 @@ BUTTONS = (
         ],
         [
             InlineKeyboardButton(
-                text="🗣 Updates", url="https://t.me/Micromyxgroup"
+                text="🗣 Updates", url="https://t.me/Alitabotupdates"
             ),
             InlineKeyboardButton(
                 text="👥 Support",
-                url=",https://t.me/Micromyxgroup"
+                url=",https://t.me/Alitabotupdates"
             ),
         ],
         [
             InlineKeyboardButton(
                 text="➕ Add Me To Your Group ➕",
-                url=f"t.me/A-X-Lbot?startgroup=true",
+                url=f"t.me/mxalitagirlbot?startgroup=true",
             )
         ],
     ]
@@ -245,7 +245,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "*Promote me as administrator of the group, otherwise I will not be able to work properly*\n Don't forget follow my news channel @Micromyxchanel.\n\n*New to Micromyx Botz, Touch the below button to for quick setup guide*".format(
+            "*Promote me as administrator of the group, otherwise I will not be able to work properly*\n Don't forget follow my news channel @Alitabotupdates.\n\n*New to Micromyx Botz, Touch the below button to for quick setup guide*".format(
                 uptime
             ),
             parse_mode=ParseMode.MARKDOWN,
@@ -311,7 +311,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "╔═════「   A-X-L   」═════╗\n\nHere Is The Available  Help\n          For The {}   \n\n╚═════「  szrosebot   」═════╝\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ".format(
+                "╔═════「   Alita   」═════╗\n\nHere Is The Available  Help\n          For The {}   \n\n╚═════「  mxalitagirlbot   」═════╝\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -383,15 +383,15 @@ def DewmiBot_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Bᴜɢ'ꜱ🐞", url="t.me/Micromyxchanel"
+                            text="Bᴜɢ'ꜱ🐞", url="t.me/Alitabotupdates"
                         ),
                         InlineKeyboardButton(
-                            text="updates💁‍♀️", url="t.me/Micromyxgroup"
+                            text="updates💁‍♀️", url="t.me/Alitabotupdates"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Donate 🤕", url="http://t.me/A-X-Lbot?start=donate"
+                            text="Donate 🤕", url="http://t.me/mxalitagirlbot?start=donate"
                         ),
                         InlineKeyboardButton(
                             text="Inline search 🔎", switch_inline_query_current_chat=""
@@ -414,7 +414,7 @@ def DewmiBot_about_callback(update, context):
             text=f"** Here's basic Help regarding* *How to use Me? **"
             f"\n\n Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n\n After adding promote me manually with full rights for faster experience.\n"
-            f"\n\n Than send `/admincache@szrosebot` in that chat to refresh admin list in My database.\n"
+            f"\n\n Than send `/admincache@mxalitagirlbot` in that chat to refresh admin list in My database.\n"
             f"\n\n *All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -439,7 +439,7 @@ def DewmiBot_about_callback(update, context):
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
             text=f"*Let's make your group root effective now*"
-            f"\nCongragulations, A-X-L🇱🇰 now ready to manage your group."
+            f"\nCongragulations, ALITA🇱🇰 now ready to manage your group."
             f"\n\n*Admin Tools*"
             f"\nBasic Admin tools help you to protect and powerup your group."
             f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -466,14 +466,14 @@ def DewmiBot_about_callback(update, context):
         )
     elif query.data == "aboutmanu_spamprot":
         query.message.edit_text(
-            text="* @szrosebot🇱🇰 support chats*"
+            text="* @mxalitagirlbot🇱🇰 support chats*"
             "\nJoin Support Group/Channel",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
                     InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/Micromyxgroup"),
-                    InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇꜱ", url="https://t.me/Micromyxgroup "),
+                    InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇꜱ", url="https://t.me/Alitabotupdates"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto"),
@@ -548,7 +548,7 @@ def get_help(update, context):
                     [
                         InlineKeyboardButton(
                             text="Click me for help!",
-                            url="https://t.me/szrosebot",
+                            url="https://t.me/mxalitagirlbot",
                         )
                     ],
                 ]
