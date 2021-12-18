@@ -1,13 +1,21 @@
 {
-      "name": "SZROSEBOT",
-      "description": "Hey there 👋 I'm szrosebot .A Powerful, Smart And Simple Group Manager with some extra features..",
-	  "logo": "https://telegra.ph/file/9dd16a0599147d664f2a8.jpg",
+      "name": "Rose Bot ✨",
+      "description": "A powerful group management bot which can help you to manage your groups effectively as possible. Support @slbotzone",
+   "logo": "https://telegra.ph/file/acbb04035c64f1512e73e.png",
       "keywords": [
          "Telegram",
          "Groupmanager",
          "sz-rose-bot"
       ],   
-   "repository": "https://github.com/youtubeslgeekshow/sz-rose-bot",
+   "repository": "https://github.com/szsupunma/sz-rose-bot",
+   "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+    ],
    "buildpacks": [
     {
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
@@ -47,10 +55,10 @@
          "required": true,
          "value": ""
       },    
-      "DB_URI": {
-         "description": "Your postgres sql db, empty this field if you dont have one.",
+      "SQLALCHEMY_DATABASE_URI": {
+         "description": "Your postgres sql db, get it form https://www.elephantsql.com/",
          "required": false,
-         "value": "sqldbtype://username:pw@hostname:port/db_name"
+         "value": "Fill this"
        },
     "REM_BG_API_KEY": {
       "description": "remove.bg api (no need)",
@@ -105,7 +113,7 @@
          "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Saitama support then keep the current ID's here at they are and add yours.",
          "required": false,
          "value": "1108072683"
-      },
+},
       "SPAMWATCH_API": {
          "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
          "required": false,
@@ -194,3 +202,4 @@
       }
    }
 }
+      
